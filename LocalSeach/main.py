@@ -45,20 +45,16 @@ def run_algorithms(world, initial_state, algorithm_classes):
         world=world
     )
 
-if __name__ == "__main__":
-    # Load the grid world map configuration
+if __name__ == "__main__":  # ✅ اصلاح شد
     world = GridWorld("map1")
 
     algorithm_classes = [
         HillClimbing,
         SimulatedAnnealing
-        # Bonus algorithms can be added here
     ]
 
-    # Initialize a single valid starting state for fair comparison
-    # Using the base class method via one of the algorithms
+    # ✅ اصلاح شد - تولید state اولیه مشترک برای مقایسه عادلانه
     initial_state = HillClimbing(world).initialize_state()
     print(f"Initial State: {initial_state}")
 
-    # Run the evaluation pipeline
     run_algorithms(world, initial_state, algorithm_classes)
