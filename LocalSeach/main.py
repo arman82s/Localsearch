@@ -47,7 +47,6 @@ def run_algorithms(world, initial_state, algorithm_classes):
 
 if __name__ == "__main__": 
     world = GridWorld("map1")
-
     algorithm_classes = [
         HillClimbing,
         SimulatedAnnealing
