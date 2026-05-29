@@ -45,7 +45,7 @@ def run_algorithms(world, initial_state, algorithm_classes):
         world=world
     )
 
-if __name__ == "__main__":  # ✅ اصلاح شد
+if __name__ == "__main__": 
     world = GridWorld("map1")
 
     algorithm_classes = [
@@ -53,7 +53,6 @@ if __name__ == "__main__":  # ✅ اصلاح شد
         SimulatedAnnealing
     ]
 
-    # ✅ اصلاح شد - تولید state اولیه مشترک برای مقایسه عادلانه
     initial_state = HillClimbing(world).initialize_state()
     print(f"Initial State: {initial_state}")
 
